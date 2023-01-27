@@ -1,0 +1,72 @@
+
+$colorUnderline: #61dafb;
+:export {colorUnderline: $colorUnderline};
+
+.navigation {
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    list-style: none;
+    font-size: 40px;
+
+    a {
+      text-decoration: none;
+      padding: 10px;
+      margin: 0 5%;
+
+      li {
+        transition: 0.2s;
+        cursor: pointer;
+
+        &:hover {
+          opacity: .5;
+          position: relative;
+
+          &::after {
+            content: "";
+            height: 4px;
+            width: 0;
+            background: $colorUnderline;
+            position: absolute;
+            border-radius: 10px;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-animation: anim 0.3s ease forwards;
+            animation: anim 0.6s ease forwards;
+
+            @-webkit-keyframes anim {
+              to {
+                width: 100%;
+              }
+            }
+
+            @keyframes anim {
+              to {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    ul {
+      font-size: 30px;
+      margin: 0 20px;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    ul {
+      font-size: 35px;
+      margin: 0 30px;
+    }
+  }
+}
