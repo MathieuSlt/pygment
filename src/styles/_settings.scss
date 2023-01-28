@@ -3,15 +3,18 @@
   src: url(../assets/fonts/Syne-ExtraBold.ttf);
 }
 
-$font-1: "font-1", sans-serif;
+@font-face {
+  font-family: "font-2";
+  src: url(../assets/fonts/Syne-Regular.ttf);
+}
 
+$font-1: "font-1", sans-serif;
 
 $newsColor: #FB5607;
 $artistsColor: #FFBE0B;
 $projectColor: #65B8C4;
 $loginColor: #9D63C6;
 $color1: #61dafb;
-
 :export {
   color1: $color1;
   newsColor: $newsColor;
