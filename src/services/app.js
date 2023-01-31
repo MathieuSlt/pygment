@@ -1,19 +1,36 @@
 const express = require('express');
-const collection = require("./mongo")
-const cors = require('cors');
 const app = express();
+
+const collection = require("./db/dbConnect");
+const cors = require('cors');
+// const dbConnect = require("./db/dbConnect");
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
+// dbConnect();
 
-// LOGIN
-
-app.get("/", cors(), (req, res) => {
-
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content, Accept, Content-Type, Authorization"
+    );
+    res.setHeader(
+        "Access-Control-Allow-Methods",
+        "GET, POST, PUT, DELETE, PATCH, OPTIONS"
+    );
+    next();
 });
 
-app.post("/", async (req, res) => {
+// LOGIN
+app.get("/", (request, response, next) => {
+    response.json({ message: "Hey! This is your server response!" });
+    next();
+});
+
+app.post("/signin", async (req, res) => {
     const { email, password } = req.body;
 
     try {

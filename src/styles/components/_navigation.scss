@@ -6,6 +6,7 @@
 :root {
   --colorUnderline: #61dafb;
 }
+
 .navigation {
   font-family: "font-1";
 
@@ -17,20 +18,14 @@
     list-style: none;
     font-size: 40px;
 
-    a {
-      text-decoration: none;
-      padding: 10px;
-      margin: 0 5%;
+    li {
+      padding: 50px;
+      display: grid;
+      transition: 0.2s;
+      cursor: pointer;
 
-      
-      li {
-        display: grid;
-        transition: 0.2s;
-        cursor: pointer;
-
-        &:hover {
-          opacity: .5;
-        }
+      &:hover {
+        opacity: .5;
       }
     }
 
@@ -38,7 +33,7 @@
       position: relative;
 
       &::after {
-        
+
         content: "";
         height: 4px;
         width: 0;

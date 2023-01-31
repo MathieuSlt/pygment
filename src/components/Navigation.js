@@ -5,7 +5,7 @@ import variables from '../styles/_settings.scss';
 
 const Navigation = () => {
 
-    const handleMouseOver = (color) => {
+    const handleMouseClick = (color) => {
         console.log(document.documentElement.style);
         document.documentElement.style.setProperty('--colorUnderline', color);
     };
@@ -14,7 +14,7 @@ const Navigation = () => {
     const NavItem = (props) => {
         return <li
             style={{ color: props.color }}
-            onClick={handleMouseOver(props.color)}
+            onClick={handleMouseClick(props.color)}
         >{props.title}</li >;
     };
 
@@ -25,7 +25,7 @@ const Navigation = () => {
                     {/* <NavItem color={variables.newsColor} title="NEWS" /> */}
                     <li
                         style={{ color: variables.newsColor }}
-                        onClick={handleMouseOver(variables.newsColor)}>
+                        onClick={handleMouseClick(variables.newsColor)}>
                         NEWS
                     </li >
                 </NavLink>
