@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/pygment-react/static/css/main.68ac2890.css",
+    "main.js": "/pygment-react/static/js/main.71b2e715.js",
+    "static/media/waves.svg": "/pygment-react/static/media/waves.24626f4fe91821385fa2.svg",
+    "static/media/PygmentsLoogo.svg": "/pygment-react/static/media/PygmentsLoogo.30558b45fb16b865ca598f7ce5631dd2.svg",
+    "static/media/Syne-ExtraBold.ttf": "/pygment-react/static/media/Syne-ExtraBold.ec26051cf662d73d9c4d.ttf",
+    "static/media/Syne-Regular.ttf": "/pygment-react/static/media/Syne-Regular.7f4be78200f513d19f88.ttf",
+    "index.html": "/pygment-react/index.html",
+    "main.68ac2890.css.map": "/pygment-react/static/css/main.68ac2890.css.map",
+    "main.71b2e715.js.map": "/pygment-react/static/js/main.71b2e715.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.68ac2890.css",
+    "static/js/main.71b2e715.js"
+  ]
+}
