@@ -1,9 +1,10 @@
 import React from 'react';
+import Scene from '../components/Scene';
 
 const Error = () => {
     return (
         <div>
-            <h1>404 pas la</h1>
+            <Scene />
         </div>
     );
 };
